@@ -97,9 +97,33 @@ console.log(result_seven);
 const result_eight = products.reduce((a, b) => a.price > b.price ? a : b);
 console.log(result_eight);
 
+// написать скрипт, который выводит максимальную цену товара
 
 
+const result_nine = products.reduce((a, {price}) => a > price ? a : price, 0);
+console.log(result_nine);
 
+//======================================================================
+
+const arr = [1, 4, 4, 3, 5, 1, 4, 3, 4, 5, 1, 1];
+
+
+// создать скрипт, который формирует из данного массива объект, где в качестве ключа выступает элемент массива, а в качестве значения кол-во его повторений в массиве 
+
+// {
+//     1: 4,
+//     4: 4,
+//     3: 2,
+//     5: 2
+// }
+
+
+const result_ten = arr.reduce((acc, item) => ({
+    ...acc, 
+    [item]: acc[item] +1 || 1
+}), {})
+
+console.log(result_ten);
 
 
 
